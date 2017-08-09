@@ -2,7 +2,7 @@ node {
   stage 'Application build'
   echo 'Compilation is done'
   stage 'Application deployment'
-  echo 'Application is deployed'
+  echo 'Application is deployed. Script is downloaded'
   stage 'Taurus test execution'
   build job: 'Taurus_test'
 }
