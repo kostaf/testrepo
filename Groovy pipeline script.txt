@@ -2,7 +2,10 @@ node {
   stage 'Application build'
   echo 'Compilation is done'
   stage 'Application deployment'
-  echo 'Application is deployed. Script is downloaded'
+  echo 'Application is deployed'
+  stage 'Update Taurus scripts'
+  bat "c:\\projects\\jmeter\\blazemetervideo\\testrepo\\testrepo\\buildscript.bat"
+  echo "Fetching Taurus script from the repo"
   stage 'Taurus test execution'
   build job: 'Taurus_test'
 }
