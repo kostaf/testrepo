@@ -4,8 +4,9 @@ node {
   stage 'Application deployment'
   echo 'Application is deployed'
   stage 'Update Taurus scripts'
-  bat "c:\\projects\\jmeter\\blazemetervideo\\testrepo\\testrepo\\buildscript.bat"
-  echo "Fetching Taurus script from the repo"
+  bat "c:\\projects\\jmeter\\blazemetervideo\\testrepo\\testrepo\\buildscript.bat
+       copy /Y c:\\projects\\jmeter\\blazemetervideo\\testrepo\\testrepo\\test1.yml c:\\projects\\jmeter\\blazemetervideo\\lesson8"
+  echo "Fetching Taurus scripts from the repo"
   stage 'Taurus test execution'
   build job: 'Taurus_test'
 }
